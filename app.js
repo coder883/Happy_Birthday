@@ -1,3 +1,10 @@
+window.addEventListener('load', () => {
+    if (!sessionStorage.getItem('reloaded')) {
+        sessionStorage.setItem('reloaded', 'true');
+        location.reload();
+    }
+});
+
 const btn = document.getElementById('surpriseBtn');
 const card = document.getElementById('card');
 
@@ -47,3 +54,4 @@ finalBtn.addEventListener('click', () => {
   document.body.style.backgroundImage = "url(birthday_image.webp)";
   document.body.style.backgroundSize = "none";
 });
+
