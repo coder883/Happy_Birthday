@@ -1,62 +1,58 @@
 window.onload = () => {
+  const btn = document.getElementById("surpriseBtn");
+  const card = document.getElementById("card");
+  const container = document.getElementById("container");
+  const finalBtn = document.getElementById("lastBtn");
+  const finalPage = document.getElementById("finalPage");
+  const header = document.getElementById("header");
+  const flexbox = document.getElementById("flexbox");
 
-  const btn = document.getElementById('surpriseBtn');
-    const card = document.getElementById('card');
+  btn.addEventListener("click", () => {
+    // Κρύβουμε header & κουμπί
+    header.style.display = "none";
+    flexbox.style.display = "none";
 
-    btn.addEventListener('click', () => {
-      // Show card
-      card.style.display = 'flex';
-      document.getElementById("header").style.display = "none";
-      document.getElementById("flexbox").style.display = "none";
+    // Εμφανίζουμε την κάρτα με flex και σωστό direction
+    card.style.display = "flex";
+    card.style.flexDirection = "column";
 
-      // Confetti parameters adjusted for mobile
-      const isMobile = window.innerWidth <= 600;
-      const burstCount = 10;
-      const startX = 0.2;
-      const endX = 0.8;
-
-      for (let i = 0; i < burstCount; i++) {
-        confetti({
-          particleCount: isMobile ? 100 : 160,
-          spread: isMobile ? 90 : 120,
-          angle: 90,
-          gravity: isMobile ? 0.8 : 0.6,
-          scalar: 1.5,
-          origin: { x: startX + ((endX - startX) / (burstCount - 1)) * i, y: 0.7 },
-          ticks: isMobile ? 250 : 400
-        });
-      }
-
-      const container = document.getElementById("container");
-      container.style.display= "flex";
-      if (window.innerWidth > 600){
-        document.body.style.height = "150%";
-      }
-      else{
-        document.body.style.height = "100%";
-      }
-
+    // Κάνουμε confetti
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
     });
+  });
 
+  card.addEventListener("click", () => {
+    // Κρύβουμε κάρτα
+    card.style.display = "none";
 
-const finalBtn = document.getElementById('lastBtn');
+    // Εμφανίζουμε container με το δεύτερο κουμπί
+    container.style.display = "flex";
+    container.style.flexDirection = "column";
 
-    finalBtn.addEventListener('click', () => {
-      // Show card
-      card.style.display = 'none';
-
-      const container = document.getElementById("container");
-      container.style.display= "none";
-      if (window.innerWidth > 600){
-        document.body.style.height = "150%";
-      }
-      else{
-        document.body.style.height = "80%";
-      }
-      const finalPage = document.getElementById("finalPage");
-      finalPage.style.display = "flex";
-      document.body.style.backgroundImage ="url(birthday_image.webp)";
-      document.body.style.backgroundSize = "none";
+    // Confetti πάλι
+    confetti({
+      particleCount: 150,
+      spread: 120,
+      origin: { y: 0.6 },
     });
+  });
 
-}
+  finalBtn.addEventListener("click", () => {
+    // Κρύβουμε container
+    container.style.display = "none";
+
+    // Εμφανίζουμε τελικό page με εικόνα και ήχους
+    finalPage.style.display = "flex";
+    finalPage.style.flexDirection = "column";
+
+    // Confetti τελική γιορτή
+    confetti({
+      particleCount: 200,
+      spread: 160,
+      origin: { y: 0.6 },
+    });
+  });
+};
