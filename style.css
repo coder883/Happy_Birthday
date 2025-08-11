@@ -1,37 +1,24 @@
-/* Global box-sizing for consistent sizing */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 /* Reset and base */
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 100%;          /* 100% ύψος ώστε να καλύπτει όλη την οθόνη */
   min-height: 100vh;
   background-color: rgb(220, 105, 124);
   background-image: url("hear.jpg");
   background-repeat: no-repeat;
   font-family: "Zen Antique", cursive;
   background-position: center center;
-  background-size: cover;
+  background-size: cover;    /* Καλύπτει όλη την οθόνη */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  overflow-x: hidden;        /* Αποφυγή οριζόντιας κύλισης */
 }
 
 /* Header */
 header {
-  font-size: clamp(1.5rem, 5vw, 3rem);
+
+  font-size: clamp(1.5rem, 5vw, 3rem);  /* Responsive font size */
   text-align: center;
   padding: 5rem 1rem 4rem 1rem;
   font-weight: bolder;
@@ -48,81 +35,91 @@ header {
   padding: 10px;
 }
 
-/* Surprise Button */
+/* Button styles unchanged, but font-family reset if used inside */
+
 #surpriseBtn {
-  position: relative;
-  height: 25vh;
-  width: 20vw;
-  background-color: #ec2e4e;
-  border-radius: 8px;
-  border: 1px solid #b3223b;
-  cursor: pointer;
-  overflow: visible;
-  transition: transform 0.3s ease;
-}
+      position: relative;
+      height: 25vh;
+      width: 20vw;
+      background-color: #ec2e4e;
+      border-radius: 8px;
+      border: 1px solid #b3223b;
+      cursor: pointer;
+      overflow: visible;
+      transition: transform 0.3s ease;
+    }
 
-#surpriseBtn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 20%;
-  height: 100%;
-  background-color: gold;
-  z-index: 1;
-  border-radius: 4px;
-}
+    /* Vertical ribbon on box and lid */
+    #surpriseBtn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20%;
+      height: 100%;
+      background-color: gold;
+      z-index: 1;
+      border-radius: 4px;
+    }
 
-#surpriseBtn::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  height: 20%;
-  background-color: gold;
-  z-index: 1;
-  border-radius: 4px;
-}
+    /* Horizontal ribbon on box */
+    #surpriseBtn::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 20%;
+      background-color: gold;
+      z-index: 1;
+      border-radius: 4px;
+    }
 
-#surpriseBtn .lid {
-  position: absolute;
-  top: -20%;
-  left: 0;
-  width: 100%;
-  height: 25%;
-  background: linear-gradient(145deg, #d02b3c, #a0202f);
-  border-radius: 8px 8px 0 0;
-  box-shadow: inset 0 4px 8px rgba(255, 100, 100, 0.7), 0 5px 10px rgba(0, 0, 0, 0.3);
-  transform-origin: left center;
-  transition: transform 0.5s ease;
-  z-index: 3;
-  pointer-events: none;
-  overflow: visible;
-}
+    /* The lid */
+    #surpriseBtn .lid {
+      position: absolute;
+      top: -20%;
+      left: 0;
+      width: 100%;
+      height: 25%;
+      background: linear-gradient(145deg, #d02b3c, #a0202f);
+      border-radius: 8px 8px 0 0;
+      box-shadow:
+        inset 0 4px 8px rgba(255, 100, 100, 0.7),
+        0 5px 10px rgba(0, 0, 0, 0.3);
+      transform-origin: left center;
+      transition: transform 0.5s ease;
+      z-index: 3;
+      pointer-events: none;
+      overflow: visible;
+    }
 
-#surpriseBtn .lid::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 20%;
-  height: 100%;
-  background-color: gold;
-  border-radius: 8px 8px 0 0;
-  z-index: 2;
-}
+    /* Extend vertical ribbon onto lid */
+    #surpriseBtn .lid::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20%;
+      height: 100%;
+      background-color: gold;
+      border-radius: 8px 8px 0 0;
+      z-index: 2;
+    }
 
-#surpriseBtn:hover {
-  transform: scale(1.07);
-}
+    /* Hover effects */
+    #surpriseBtn:hover {
+      transform: scale(1.07);
+    }
 
-#surpriseBtn:hover .lid {
-  transform: rotate(-70deg);
-}
+    #surpriseBtn:hover .lid {
+      transform: rotate(-70deg);
+    }
+
+   
 
 /* Card */
 .card {
@@ -130,16 +127,12 @@ header {
   margin: 20px auto;
   padding: 20px;
   width: 50%;
-  min-width: 280px;
   background: rgb(242, 139, 175);
   border-radius: 4vw;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-size: clamp(1rem, 4vw, 1.5rem);
   flex-wrap: wrap;
   flex-direction: column;
-  /* Make sure it's flex container when shown */
-  display: none;
-  /* We'll toggle display:flex in JS */
 }
 
 /* Text alignment on signatures */
@@ -156,64 +149,68 @@ header {
   font-family: "Borel", cursive;
 }
 
-#container {
+#container{
   display: none;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-#container p {
+#container p{
   font-size: xx-large;
   font-weight: bolder;
+
 }
 
-#lastBtn {
+#lastBtn{
   background-color: #ec2e4e;
   height: 15vh;
   width: 10vw;
   border-radius: 10vh;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; /* Smooth animation */
 }
 
 #lastBtn:hover {
-  background-color: #ff4969;
-  transform: scale(1.08);
+  background-color: #ff4969; /* Brighter red-pink */
+  transform: scale(1.08);    /* Slightly bigger */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-#finalPage {
+#finalPage{
   display: none;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  font-size: xx-large;
+  flex-direction: column;font-size: xx-large;
   font-weight: bolder;
   padding-top: 10vh;
 }
 
+
 /* Responsive tweaks */
 @media (max-width: 600px) {
-  html,
-  body {
-    background-position: center top !important;
+  html, body {
+    background-position: center top; /* Σημαντικό το !important αν κάποιο άλλο CSS το υπερκαλύπτει */
     background-size: cover;
     height: 200vh;
   }
 
   header {
-    font-size: 2rem;
+    font-size: 2rem;       /* Σταθερό μέγεθος */
     padding-top: 3rem;
     padding-bottom: 2rem;
     gap: 5vh;
   }
 
-  #flexbox {
+  #surpriseBtn{
+    height: 20vh;
+  }
+
+  #flexbox{
     gap: 5vh;
   }
 
-  #container {
+  #container{
     gap: 5vh;
   }
 
@@ -238,4 +235,7 @@ header {
     width: 200px;
     height: auto;
   }
+
 }
+
+
