@@ -198,14 +198,19 @@ header {
     font-size: 2rem;       /* Σταθερό μέγεθος */
     padding-top: 3rem;
     padding-bottom: 2rem;
+    gap: 5vh;
+  }
+
+  #surpriseBtn{
+    height: 20vh;
   }
 
   #flexbox{
-    gap: 2vh;
+    gap: 5vh;
   }
 
   #container{
-    gap: 2vh;
+    gap: 5vh;
   }
 
   #surpriseBtn {
