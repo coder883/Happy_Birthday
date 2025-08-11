@@ -5,11 +5,12 @@ window.addEventListener('load', () => {
       location.reload();
     }, 1000); // 1000 milliseconds = 1 second
   }
+  window.scrollTo(0, 0);
+  document.body.style.zoom = "100%";  // fallback for some browsers (non-standard)
+
 });
 
-window.scrollTo(0, 0);
-  document.body.style.zoom = "100%";  // fallback for some browsers (non-standard)
-});
+
 
 const btn = document.getElementById('surpriseBtn');
 const card = document.getElementById('card');
@@ -60,6 +61,7 @@ finalBtn.addEventListener('click', () => {
   document.body.style.backgroundImage = "url(birthday_image.webp)";
   document.body.style.backgroundSize = "none";
 });
+
 
 
 
