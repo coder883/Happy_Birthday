@@ -169,9 +169,9 @@ header {
 /* Last button */
 #lastBtn {
   background-color: #ec2e4e;
-  height: 15vh;
-  width: 10vw;
-  border-radius: 10vh;
+  height: 25vh;
+  width: 7.5vw;
+  border-radius: 5vh;
   cursor: pointer;
   transition: all 0.3s ease; /* Smooth animation */
 }
@@ -238,3 +238,4 @@ header {
     height: auto;
   }
 }
+
