@@ -7,6 +7,10 @@ window.addEventListener('load', () => {
   }
 });
 
+window.scrollTo(0, 0);
+  document.body.style.zoom = "100%";  // fallback for some browsers (non-standard)
+});
+
 const btn = document.getElementById('surpriseBtn');
 const card = document.getElementById('card');
 
@@ -56,5 +60,6 @@ finalBtn.addEventListener('click', () => {
   document.body.style.backgroundImage = "url(birthday_image.webp)";
   document.body.style.backgroundSize = "none";
 });
+
 
 
