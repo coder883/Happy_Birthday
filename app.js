@@ -3,7 +3,17 @@ function setVh() {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
-setVh();
+
+// Run as soon as DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    // Small delay to allow mobile browser UI to settle
+    setTimeout(setVh, 50);
+});
+
+// Run again after full load (images, fonts, etc.)
+window.addEventListener('load', setVh);
+
+// Update on resize (rotation, address bar hide)
 window.addEventListener('resize', setVh);
 
 window.onload = () => {
