@@ -21,7 +21,7 @@ const btn = document.getElementById('surpriseBtn');
           gravity: isMobile ? 0.8 : 0.6,
           scalar: 1.5,
           origin: { x: startX + ((endX - startX) / (burstCount - 1)) * i, y: 0.7 },
-          ticks: isMobile ? 300 : 500
+          ticks: isMobile ? 250 : 400
         });
       }
 
@@ -46,3 +46,4 @@ const finalBtn = document.getElementById('lastBtn');
       document.body.style.backgroundImage ="url(birthday_image.webp)";
       document.body.style.backgroundSize = "none";
     });
+
