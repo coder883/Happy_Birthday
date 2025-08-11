@@ -1,16 +1,3 @@
-window.addEventListener('load', () => {
-  if (!sessionStorage.getItem('reloaded')) {
-    sessionStorage.setItem('reloaded', 'true');
-    setTimeout(() => {
-      location.reload();
-    }, 400); // 1000 milliseconds = 1 second
-  }
-  setTimeout(() => {
-      window.scrollTo(0, 0);
-    document.body.style.zoom = "100%";  // fallback for some browsers (non-standard)
-    }, 100);
-  
-});
 
 
 
@@ -63,6 +50,7 @@ finalBtn.addEventListener('click', () => {
   document.body.style.backgroundImage = "url(birthday_image.webp)";
   document.body.style.backgroundSize = "none";
 });
+
 
 
 
