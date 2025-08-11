@@ -227,7 +227,7 @@ header {
   }
 
   #surpriseBtn {
-    width: 60vw !important;
+    width: 60px !important;
     aspect-ratio: 4 / 3 !important; /* width:height ratio */
     height: auto !important; /* let height follow aspect ratio */
   }
@@ -258,6 +258,7 @@ header {
     height: auto;
   }
 }
+
 
 
 
