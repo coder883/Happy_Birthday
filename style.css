@@ -200,14 +200,22 @@ header {
     padding-bottom: 2rem;
   }
 
+  #flexbox{
+    gap: 2vh;
+  }
+
+  #container{
+    gap: 2vh;
+  }
+
   #surpriseBtn {
     width: 60vw;
     height: 18vh;
   }
 
   #lastBtn {
-    width: 45vw;
-    height: 12vh;
+    width: 50vw;
+    height: 5vh;
   }
 
   .card {
@@ -216,9 +224,12 @@ header {
     font-size: 1.1rem;
     padding: 15px;
   }
+
+  img.responsive-image {
+    width: 300px;
+    height: auto;
+  }
+
 }
-
-
-
 
 
