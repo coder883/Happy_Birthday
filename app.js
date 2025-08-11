@@ -7,7 +7,7 @@ function setVh() {
 // Run as soon as DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     // Small delay to allow mobile browser UI to settle
-    setTimeout(setVh, 50);
+    setTimeout(setVh, 300);
 });
 
 // Run again after full load (images, fonts, etc.)
@@ -61,3 +61,4 @@ window.onload = () => {
         document.body.style.backgroundSize = "none";
     });
 };
+
