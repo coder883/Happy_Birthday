@@ -6,8 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Gloria+Hallelujah&family=Amatic+SC&family=Tangerine&family=Kaushan+Script&family=Lobster&family=Alex+Brush&family=Cinzel+Decorative&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Zen+Antique&display=swap" rel="stylesheet">
 </head>
 <body>
     <header id="header">Πάτησε τo δώρο για μία έκπληξη!</header>
@@ -23,20 +24,39 @@
     <div class="card" id="card">
         <p>Αγάπη μου,</p>
         <p>Χρόνια σου πολλά, να τα εκατοστήσεις μαζί μου<i class="em em-gift_heart" aria-role="presentation" aria-label="HEART WITH RIBBON"></i> 
-            Σου εύχομαι να είσαι πάντα υγιείς και θα κάνω τα <b>πάντα</b> για να είσαι ευτυχισμένη και να σε βοηθήσω να καταφέρεις όλους τους στόχους που έχεις θέσει. 
-            Είσαι ότι καλύτερο μου έχει συμβεί για αυτό θέλω για πάντα να σε φροντίζω ακόμα και αν πια είσαι πάλι μεγαλύτερη <i class="em em-laughing" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES"></i>
-            Θα είμαι για πάντα δίπλα σου να σε βοηθάω να πραγματοποιήσεις όλα τα όνειρα σου και να σου κάνω κάθε γένεθλιά σου όλο και πιο αξέχαστα. 
+            Σου εύχομαι να είσαι πάντα υγιείς και θα κάνω τα <b>πάντα</b> για να είσαι ευτυχισμένη και να σε βοηθήσω να καταφέρεις όλους τους στόχους και τα όνειρα σου. 
+            Είσαι ότι καλύτερο μου έχει συμβεί για αυτό θέλω για πάντα να σε φροντίζω ακόμα και αν πια είσαι πάλι μεγαλύτερη <i class="em em-laughing" aria-role="presentation" aria-label="SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES"></i> 
             Εύχομαι όλα στη ζωη να σου πάνε όπως τα θέλεις και αν κάτι δεν πάει εγώ και πάλι θα είμαι εδώ.
-            Από εδω και πέρα όλα τα γενέθλιά σου θα τα γιορτάζουμε μαζί. Με κάνεις πάρα πολυ περήφανο και όσο σκέφτομαι ποσο χρονών είσαι τόσο πιο πολύ συνδειδητοποιώ πως πλεον είσαι γυναίκα(και στο μέλλον η δική μου γυναίκα<i class="em em-face_with_hand_over_mouth" aria-role="presentation" aria-label="SMILING FACE WITH SMILING EYES AND HAND COVERING MOUTH"></i>).
+            Από εδω και πέρα όλα τα γενέθλιά σου θα τα γιορτάζουμε μαζί και θα τα κάνουμε όλα αξέχαστα. 
+            Με κάνεις πάρα πολυ περήφανο και όσο σκέφτομαι τα πόσα κλείνεις τόσο πιο πολύ συνδειδητοποιώ πως πλεον είσαι γυναίκα(και στο μέλλον η δική μου γυναίκα<i class="em em-face_with_hand_over_mouth" aria-role="presentation" aria-label="SMILING FACE WITH SMILING EYES AND HAND COVERING MOUTH"></i>).
         </p>
         <p id="id1">Forever yours,</p>
         <p id="id2">your Dudu<i class="em em-gift" aria-role="presentation" aria-label="WRAPPED PRESENT"></i></p>
     </div>
+
+    <div id="container">
+        <p>Και μια τελευταία έκπληξη!</p>
+        <button id="lastBtn" type="button"></button>
+    </div>
+
+    <div id="finalPage">
+        <img src="aspa_birthday.png" alt="Us at your birthday" width="500" height="500">
+
+        <!-- Audio message -->
+        <p><strong>Χρόνια πολλά ❤️</strong></p>
+        <audio controls>
+            <source src="greek_song.m4a" type="audio/mp4">
+        </audio>
+        <p><strong>Happy birthday ❤️</strong></p>
+        <audio controls>
+            <source src="english_song.m4a" type="audio/mp4">
+        </audio>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script src="app.js"></script>
     
 </body>
 
 </html>
-
 
