@@ -49,10 +49,11 @@ const finalBtn = document.getElementById('lastBtn');
         document.body.style.height = "150%";
       }
       else{
-        document.body.style.height = "100%";
+        document.body.style.height = "80%";
       }
       const finalPage = document.getElementById("finalPage");
       finalPage.style.display = "flex";
       document.body.style.backgroundImage ="url(birthday_image.webp)";
       document.body.style.backgroundSize = "none";
     });
+
