@@ -27,7 +27,12 @@ const btn = document.getElementById('surpriseBtn');
 
       const container = document.getElementById("container");
       container.style.display= "flex";
-      document.body.style.height = "150%";
+      if (window.innerWidth > 600){
+        document.body.style.height = "150%";
+      }
+      else{
+        document.body.style.height = "100%";
+      }
 
     });
 
@@ -40,10 +45,14 @@ const finalBtn = document.getElementById('lastBtn');
 
       const container = document.getElementById("container");
       container.style.display= "none";
-      document.body.style.height = "150%";
+      if (window.innerWidth > 600){
+        document.body.style.height = "150%";
+      }
+      else{
+        document.body.style.height = "100%";
+      }
       const finalPage = document.getElementById("finalPage");
       finalPage.style.display = "flex";
       document.body.style.backgroundImage ="url(birthday_image.webp)";
       document.body.style.backgroundSize = "none";
     });
-
