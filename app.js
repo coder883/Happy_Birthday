@@ -21,7 +21,7 @@ btn.addEventListener('click', () => {
       gravity: isMobile ? 0.8 : 0.6,
       scalar: 1.5,
       origin: { x: startX + ((endX - startX) / (burstCount - 1)) * i, y: 0.7 },
-      ticks: isMobile ? 250 : 400
+      ticks: isMobile ? 150 : 300
     });
   }
 
@@ -47,3 +47,4 @@ finalBtn.addEventListener('click', () => {
   document.body.style.backgroundImage = "url(birthday_image.webp)";
   document.body.style.backgroundSize = "none";
 });
+
