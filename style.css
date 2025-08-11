@@ -167,6 +167,12 @@ header {
   border-radius: 10vh;
 }
 
+#lastBtn:hover {
+  background-color: #ff4969; /* Brighter red-pink */
+  transform: scale(1.08);    /* Slightly bigger */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 #finalPage{
   display: none;
   align-items: center;
