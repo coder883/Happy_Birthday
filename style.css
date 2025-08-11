@@ -220,10 +220,12 @@ img {
   }
 
   #header {
+    position: fixed;
     font-size: 2rem;
     padding-top: 3rem;
     padding-bottom: 8rem;
     gap: 5vh;
+    z-index: 999;
   }
 
   #surpriseBtn {
@@ -258,6 +260,7 @@ img {
     height: auto;
   }
 }
+
 
 
 
