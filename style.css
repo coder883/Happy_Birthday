@@ -40,7 +40,7 @@ img {
 }
 
 /* Header */
-#header {
+header {
   font-size: clamp(1.5rem, 5vw, 3rem);  /* Responsive font size */
   text-align: center;
   padding: 5rem 1rem 4rem 1rem;
@@ -219,24 +219,20 @@ img {
     min-height: 200vh; /* Optional to allow scroll if needed */
   }
 
-  #header {
-    position: fixed;
+  header {
     font-size: 2rem;
     padding-top: 3rem;
-    padding-bottom: 8rem;
+    padding-bottom: 2rem;
     gap: 5vh;
-    z-index: 999;
   }
 
   #surpriseBtn {
-    width: 60px !important;
-    aspect-ratio: 4 / 3 !important; /* width:height ratio */
-    height: auto !important; /* let height follow aspect ratio */
+    width: 60vw;
+    height: 5vh;
   }
 
   #flexbox {
-    gap: 0;
-    padding-top: 5vh;
+    gap: 5vh;
   }
 
   #container {
@@ -260,18 +256,6 @@ img {
     height: auto;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
