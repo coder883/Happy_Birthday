@@ -150,6 +150,7 @@ header {
   html, body {
     background-position: center top; /* Σημαντικό το !important αν κάποιο άλλο CSS το υπερκαλύπτει */
     background-size: cover;
+    height: 200vh;
   }
 
   header {
@@ -170,6 +171,7 @@ header {
     padding: 15px;
   }
 }
+
 
 
 
