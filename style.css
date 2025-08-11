@@ -23,6 +23,7 @@ img {
 
 /* Header */
 header {
+  display: none;
   font-size: clamp(1.5rem, 5vw, 3rem);  /* Responsive font size */
   text-align: center;
   padding: 5rem 1rem 4rem 1rem;
@@ -33,7 +34,7 @@ header {
 
 /* Flexbox container */
 #flexbox {
-  display: flex;
+  display: none;
   max-width: 100%;
   justify-content: center;
   align-items: center;
@@ -45,7 +46,7 @@ header {
 /* Button styles */
 #surpriseBtn {
   position: relative;
-  height: 25vh;
+  height: 20vh;
   width: 20vw;
   background-color: #ec2e4e;
   border-radius: 8px;
@@ -238,5 +239,6 @@ header {
     height: auto;
   }
 }
+
 
 
