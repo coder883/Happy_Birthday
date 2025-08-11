@@ -147,26 +147,27 @@ header {
 /* Responsive tweaks */
 @media (max-width: 600px) {
   html, body {
-    background-position: center top !important; /* Σημαντικό το !important αν κάποιο άλλο CSS το υπερκαλύπτει */
-    background-size: cover !important;
+    background-position: center top; /* Σημαντικό το !important αν κάποιο άλλο CSS το υπερκαλύπτει */
+    background-size: cover;
   }
 
   header {
-    font-size: 2rem !important;       /* Σταθερό μέγεθος */
-    padding-top: 3rem !important;
-    padding-bottom: 2rem !important;
+    font-size: 2rem;       /* Σταθερό μέγεθος */
+    padding-top: 3rem;
+    padding-bottom: 2rem;
   }
 
   #surpriseBtn {
-    width: 60vw !important;
-    height: 18vh !important;
+    width: 60vw;
+    height: 18vh;
   }
 
   .card {
-    width: 90vw !important;
-    border-radius: 8vw !important;
-    font-size: 1.1rem !important;
-    padding: 15px !important;
+    width: 90vw;
+    border-radius: 8vw;
+    font-size: 1.1rem;
+    padding: 15px;
   }
 }
+
 
