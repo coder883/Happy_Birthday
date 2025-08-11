@@ -9,7 +9,7 @@ html, body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;    /* Καλύπτει όλη την οθόνη */
-  font-family: 'Lobster', cursive, 'Kaushan Script', cursive, 'Gochi Hand', cursive, sans-serif;
+  font-family: 'Lobster', 'Kaushan Script', 'Gochi Hand', cursive, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;        /* Αποφυγή οριζόντιας κύλισης */
@@ -34,6 +34,90 @@ header {
 }
 
 /* Button styles unchanged, but font-family reset if used inside */
+
+#surpriseBtn {
+      position: relative;
+      height: 25vh;
+      width: 20vw;
+      background-color: #ec2e4e;
+      border-radius: 8px;
+      border: 1px solid #b3223b;
+      cursor: pointer;
+      overflow: visible;
+      transition: transform 0.3s ease;
+    }
+
+    /* Vertical ribbon on box and lid */
+    #surpriseBtn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20%;
+      height: 100%;
+      background-color: gold;
+      z-index: 1;
+      border-radius: 4px;
+    }
+
+    /* Horizontal ribbon on box */
+    #surpriseBtn::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 20%;
+      background-color: gold;
+      z-index: 1;
+      border-radius: 4px;
+    }
+
+    /* The lid */
+    #surpriseBtn .lid {
+      position: absolute;
+      top: -20%;
+      left: 0;
+      width: 100%;
+      height: 25%;
+      background: linear-gradient(145deg, #d02b3c, #a0202f);
+      border-radius: 8px 8px 0 0;
+      box-shadow:
+        inset 0 4px 8px rgba(255, 100, 100, 0.7),
+        0 5px 10px rgba(0, 0, 0, 0.3);
+      transform-origin: left center;
+      transition: transform 0.5s ease;
+      z-index: 3;
+      pointer-events: none;
+      overflow: visible;
+    }
+
+    /* Extend vertical ribbon onto lid */
+    #surpriseBtn .lid::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20%;
+      height: 100%;
+      background-color: gold;
+      border-radius: 8px 8px 0 0;
+      z-index: 2;
+    }
+
+    /* Hover effects */
+    #surpriseBtn:hover {
+      transform: scale(1.07);
+    }
+
+    #surpriseBtn:hover .lid {
+      transform: rotate(-70deg);
+    }
+
+   
 
 /* Card */
 .card {
@@ -85,3 +169,4 @@ header {
     padding: 15px !important;
   }
 }
+
