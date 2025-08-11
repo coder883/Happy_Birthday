@@ -63,7 +63,7 @@ header {
 /* Button styles */
 #surpriseBtn {
   position: relative;
-  height: 20vh;
+  height: 30vh;
   width: 30vw;
   background-color: #ec2e4e;
   border-radius: 7px;
@@ -228,7 +228,7 @@ header {
 
   #surpriseBtn {
     width: 60vw;
-    height: 10vh;
+    height: 5vh;
   }
 
   #flexbox {
@@ -256,6 +256,7 @@ header {
     height: auto;
   }
 }
+
 
 
 
