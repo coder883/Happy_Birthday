@@ -227,9 +227,9 @@ header {
   }
 
   #surpriseBtn {
-    width: 60vw;
-    aspect-ratio: 4 / 3; /* width:height ratio */
-    height: auto; /* let height follow aspect ratio */
+    width: 60vw !important;
+    aspect-ratio: 4 / 3 !important; /* width:height ratio */
+    height: auto !important; /* let height follow aspect ratio */
   }
 
   #flexbox {
@@ -258,6 +258,7 @@ header {
     height: auto;
   }
 }
+
 
 
 
