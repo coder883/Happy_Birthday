@@ -1,12 +1,6 @@
 window.onload = () => {
-  const header = document.getElementById("header");
-  const flexbox = document.getElementById("flexbox");
-  header.style.display = "block";
-  flexbox.style.display = "flex";
-};
 
-
-const btn = document.getElementById('surpriseBtn');
+  const btn = document.getElementById('surpriseBtn');
     const card = document.getElementById('card');
 
     btn.addEventListener('click', () => {
@@ -64,3 +58,5 @@ const finalBtn = document.getElementById('lastBtn');
       document.body.style.backgroundImage ="url(birthday_image.webp)";
       document.body.style.backgroundSize = "none";
     });
+
+}
