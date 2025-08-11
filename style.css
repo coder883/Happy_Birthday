@@ -1,8 +1,17 @@
+/* Global box-sizing for consistent sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Reset and base */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;          /* Changed from height: 100% to min-height */
+  height: 100%;
+  min-height: 100vh;
   background-color: rgb(220, 105, 124);
   background-image: url("hear.jpg");
   background-repeat: no-repeat;
@@ -11,10 +20,9 @@ html, body {
   background-size: cover;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;        /* Avoid horizontal scroll */
+  overflow-x: hidden;
 }
 
-/* Make all images responsive */
 img {
   max-width: 100%;
   height: auto;
@@ -23,7 +31,7 @@ img {
 
 /* Header */
 header {
-  font-size: clamp(1.5rem, 5vw, 3rem);  /* Responsive font size */
+  font-size: clamp(1.5rem, 5vw, 3rem);
   text-align: center;
   padding: 5rem 1rem 4rem 1rem;
   font-weight: bolder;
@@ -38,14 +46,12 @@ header {
   justify-content: center;
   align-items: center;
   padding: 10px;
-  flex-wrap: wrap;       /* Added flex-wrap for responsiveness */
-  gap: 10px;             /* Added spacing between items */
 }
 
-/* Button styles */
+/* Surprise Button */
 #surpriseBtn {
   position: relative;
-  height: 15vh;
+  height: 25vh;
   width: 20vw;
   background-color: #ec2e4e;
   border-radius: 8px;
@@ -55,7 +61,6 @@ header {
   transition: transform 0.3s ease;
 }
 
-/* Vertical ribbon on box and lid */
 #surpriseBtn::before {
   content: "";
   position: absolute;
@@ -69,7 +74,6 @@ header {
   border-radius: 4px;
 }
 
-/* Horizontal ribbon on box */
 #surpriseBtn::after {
   content: "";
   position: absolute;
@@ -83,7 +87,6 @@ header {
   border-radius: 4px;
 }
 
-/* The lid */
 #surpriseBtn .lid {
   position: absolute;
   top: -20%;
@@ -92,9 +95,7 @@ header {
   height: 25%;
   background: linear-gradient(145deg, #d02b3c, #a0202f);
   border-radius: 8px 8px 0 0;
-  box-shadow:
-    inset 0 4px 8px rgba(255, 100, 100, 0.7),
-    0 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 4px 8px rgba(255, 100, 100, 0.7), 0 5px 10px rgba(0, 0, 0, 0.3);
   transform-origin: left center;
   transition: transform 0.5s ease;
   z-index: 3;
@@ -102,7 +103,6 @@ header {
   overflow: visible;
 }
 
-/* Extend vertical ribbon onto lid */
 #surpriseBtn .lid::before {
   content: "";
   position: absolute;
@@ -116,7 +116,6 @@ header {
   z-index: 2;
 }
 
-/* Hover effects */
 #surpriseBtn:hover {
   transform: scale(1.07);
 }
@@ -131,12 +130,16 @@ header {
   margin: 20px auto;
   padding: 20px;
   width: 50%;
+  min-width: 280px;
   background: rgb(242, 139, 175);
   border-radius: 4vw;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-size: clamp(1rem, 4vw, 1.5rem);
   flex-wrap: wrap;
   flex-direction: column;
+  /* Make sure it's flex container when shown */
+  display: none;
+  /* We'll toggle display:flex in JS */
 }
 
 /* Text alignment on signatures */
@@ -153,7 +156,6 @@ header {
   font-family: "Borel", cursive;
 }
 
-/* Container for final surprise */
 #container {
   display: none;
   align-items: center;
@@ -166,23 +168,21 @@ header {
   font-weight: bolder;
 }
 
-/* Last button */
 #lastBtn {
   background-color: #ec2e4e;
-  height: 10vh;
-  width: 10vh;
-  border-radius: 5vh;
+  height: 15vh;
+  width: 10vw;
+  border-radius: 10vh;
   cursor: pointer;
-  transition: all 0.3s ease; /* Smooth animation */
+  transition: all 0.3s ease;
 }
 
 #lastBtn:hover {
-  background-color: #ff4969; /* Brighter red-pink */
-  transform: scale(1.08);    /* Slightly bigger */
+  background-color: #ff4969;
+  transform: scale(1.08);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Final page */
 #finalPage {
   display: none;
   align-items: center;
@@ -195,10 +195,11 @@ header {
 
 /* Responsive tweaks */
 @media (max-width: 600px) {
-  html, body {
-    background-position: center top;
+  html,
+  body {
+    background-position: center top !important;
     background-size: cover;
-    min-height: 200vh; /* Optional to allow scroll if needed */
+    height: 200vh;
   }
 
   header {
@@ -208,17 +209,17 @@ header {
     gap: 5vh;
   }
 
-  #surpriseBtn {
-    width: 60vw;
-    height: 18vh;
-  }
-
   #flexbox {
     gap: 5vh;
   }
 
   #container {
     gap: 5vh;
+  }
+
+  #surpriseBtn {
+    width: 60vw;
+    height: 18vh;
   }
 
   #lastBtn {
@@ -238,9 +239,3 @@ header {
     height: auto;
   }
 }
-
-
-
-
-
-
