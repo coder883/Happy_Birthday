@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'Zen Antique';
+  src: url('ZenAntique-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Borel';
+  src: url('Borel-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 /* Reset and base */
 html, body {
   margin: 0;
@@ -45,7 +63,7 @@ header {
 /* Button styles */
 #surpriseBtn {
   position: relative;
-  height: 10vh;
+  height: 30vh;
   width: 30vw;
   background-color: #ec2e4e;
   border-radius: 7px;
@@ -210,7 +228,7 @@ header {
 
   #surpriseBtn {
     width: 60vw;
-    height: 18vh;
+    height: 10vh;
   }
 
   #flexbox {
@@ -238,7 +256,6 @@ header {
     height: auto;
   }
 }
-
 
 
 
