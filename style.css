@@ -57,7 +57,7 @@ header {
   align-items: center;
   padding: 10px;
   flex-wrap: wrap;       /* Added flex-wrap for responsiveness */
-  gap: 10px;             /* Added spacing between items */
+  gap: 3vh;             /* Added spacing between items */
 }
 
 /* Button styles */
@@ -256,6 +256,7 @@ header {
     height: auto;
   }
 }
+
 
 
 
