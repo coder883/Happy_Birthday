@@ -40,7 +40,7 @@ img {
 }
 
 /* Header */
-header {
+#header {
   font-size: clamp(1.5rem, 5vw, 3rem);  /* Responsive font size */
   text-align: center;
   padding: 5rem 1rem 4rem 1rem;
@@ -219,7 +219,7 @@ header {
     min-height: 200vh; /* Optional to allow scroll if needed */
   }
 
-  header {
+  #header {
     font-size: 2rem;
     padding-top: 3rem;
     padding-bottom: 8rem;
@@ -258,6 +258,7 @@ header {
     height: auto;
   }
 }
+
 
 
 
