@@ -6,11 +6,6 @@ const btn = document.getElementById('surpriseBtn');
       card.style.display = 'flex';
       document.getElementById("header").style.display = "none";
       document.getElementById("flexbox").style.display = "none";
-      
-
-      const container = document.getElementById("container");
-      container.style.display= "flex";
-      document.body.style.height = "150%";
 
       // Confetti parameters adjusted for mobile
       const isMobile = window.innerWidth <= 600;
@@ -30,6 +25,10 @@ const btn = document.getElementById('surpriseBtn');
         });
       }
 
+      const container = document.getElementById("container");
+      container.style.display= "flex";
+      document.body.style.height = "150%";
+
     });
 
 
@@ -38,13 +37,12 @@ const finalBtn = document.getElementById('lastBtn');
     finalBtn.addEventListener('click', () => {
       // Show card
       card.style.display = 'none';
-      
-      finalPage.style.display = "flex";
-      document.body.style.backgroundImage ="url(birthday_image.webp)";
 
       const container = document.getElementById("container");
       container.style.display= "none";
       document.body.style.height = "150%";
       const finalPage = document.getElementById("finalPage");
       finalPage.style.display = "flex";
+      document.body.style.backgroundImage ="url(birthday_image.webp)";
+      document.body.style.backgroundSize = "none";
     });
