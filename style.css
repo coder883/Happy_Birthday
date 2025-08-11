@@ -227,8 +227,8 @@ header {
   }
 
   #surpriseBtn {
-    width: 70vw;
-    height: 3vh;
+    width: 60vw;
+    height: 5vh;
   }
 
   #flexbox {
@@ -256,6 +256,7 @@ header {
     height: auto;
   }
 }
+
 
 
 
