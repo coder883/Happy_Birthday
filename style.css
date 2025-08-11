@@ -222,7 +222,7 @@ header {
   header {
     font-size: 2rem;
     padding-top: 3rem;
-    padding-bottom: 2rem;
+    padding-bottom: 8rem;
     gap: 5vh;
   }
 
@@ -257,6 +257,7 @@ header {
     height: auto;
   }
 }
+
 
 
 
