@@ -24,4 +24,25 @@ const btn = document.getElementById('surpriseBtn');
           ticks: isMobile ? 300 : 500
         });
       }
+
+      const container = document.getElementById("container");
+      container.style.display= "flex";
+      document.body.style.height = "150%";
+
+    });
+
+
+const finalBtn = document.getElementById('lastBtn');
+
+    finalBtn.addEventListener('click', () => {
+      // Show card
+      card.style.display = 'none';
+
+      const container = document.getElementById("container");
+      container.style.display= "none";
+      document.body.style.height = "150%";
+      const finalPage = document.getElementById("finalPage");
+      finalPage.style.display = "flex";
+      document.body.style.backgroundImage ="url(birthday_image.webp)";
+      document.body.style.backgroundSize = "none";
     });
