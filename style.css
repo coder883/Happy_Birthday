@@ -45,8 +45,8 @@ header {
 /* Button styles */
 #surpriseBtn {
   position: relative;
-  height: 15vh;
-  width: 20vw;
+  height: 10vh;
+  width: 30vw;
   background-color: #ec2e4e;
   border-radius: 7px;
   border: 1px solid #b3223b;
@@ -238,6 +238,7 @@ header {
     height: auto;
   }
 }
+
 
 
 
